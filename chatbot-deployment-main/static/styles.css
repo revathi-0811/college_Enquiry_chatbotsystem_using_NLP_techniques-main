@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.logo img{
+  width: 100%;
+  height: 5%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.nav{
+  background: black;
+  border-radius: 10px;
+  height: 50px;
+  font-family:  Calibri, sans-serif;
+}
+.grd-logo img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 25px;
+  border: 3px solid whitesmoke;
+
+}
+.navdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navdiv p{
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.bg img{
+width: 99.9vw;
+height: 25rem;
+}
+.lft-rgt{
+margin: 25px;
+display: grid;
+grid-template-columns: auto auto;
+}
+.lft-rgt h2 , .more h2{
+  text-align: center;
+padding-bottom:20px ;
+color: red;
+}
+.lft-rgt p, li{
+overflow: hidden;
+font-size: 25px;
+line-height: 30px;
+}
+.more{
+  border-top: 2px solid blue;
+}
+.more p{
+  overflow: hidden;
+font-size: 25px;
+line-height: 30px;
+}
+
+
+.typing-demo {
+  width: 30ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+li a{
+  color: white;
+ font-size: 18px;
+ font-weight: bold;
+ margin-right: 25px; 
+ border-radius: 5px;
+
+}
+.nav:hover ,li:hover{
+  background:black;
+  color: aliceblue;
+  border: 2px solid cyan;
+  box-shadow: 0 0 5px cyan,0 0 50px cyan,0 0 75px cyan;
+}
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+background-color: #555;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+opacity: 0.8;
+width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+display: grid;
+grid-template-columns: auto auto;
+place-content: center;
+border: 3px solid #f1f1f1;
+z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+box-shadow: 10px 10px 10px black,
+inset  10px 10px 10px black;
+max-width: 300px;
+height: 50vh;
+padding: 10px;
+background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=textarea] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=textarea]:focus{
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: #04AA6D;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}

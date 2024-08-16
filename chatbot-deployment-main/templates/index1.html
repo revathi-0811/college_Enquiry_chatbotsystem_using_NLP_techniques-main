@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Web App</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Processing Web App</h1>
+        
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="image-upload">Upload Image:</label>
+            <input type="file" id="image-upload" name="image" accept="image/*">
+            <button type="button" onclick="processImage()">Process Image</button>
+        </form>
+
+        <div id="output-container">
+            <h2>Processed Image</h2>
+            <img id="processed-image" alt="Processed Image">
+            <a id="download-link" download="processed_image.jpg">
+                <button type="button">Download</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="app1.js"></script>
+</body>
+</html>

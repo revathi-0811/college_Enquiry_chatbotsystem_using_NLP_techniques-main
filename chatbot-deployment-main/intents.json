@@ -1,0 +1,132 @@
+{"intents": [
+  {"tag": "greeting",
+   "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Hi"],
+   "responses": ["Hello,How can I assist you today", "Hi there, how can I help?"],
+   "context": [""]
+  },
+  {"tag": "enquiry",
+  "patterns": ["how are you?"],
+  "responses": ["Iam good thanks for asking"],
+  "context": [""]
+ },
+  {"tag": "ask",
+   "patterns": ["what is your name?", "your name?" ],
+   "responses": ["Iam college AI bot","Iam college AI bot efficiently trained on college activites" ],
+   "context": [""]
+  },
+  {"tag": "age",
+  "patterns": ["what is your age?", "your age?","how old are you?" ],
+  "responses": ["As Iam AI bot I don't have age" ],
+  "context": [""]
+ },
+
+  {"tag": "goodbye",
+   "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+   "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+   "context": [""]
+  },
+  {"tag": "thanks",
+   "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+   "responses": ["Happy to help!", "Any time!", "My pleasure"],
+   "context": [""]
+  },
+  {"tag": "",
+   "patterns": [],
+   "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+   "context": [""]
+  },
+  {"tag": "options",
+   "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+   "responses": ["Welcome to NNRG CHATBOT! I'm here to assist you with any questions or information you need about our college. Whether you have inquiries about admissions, courses, campus facilities, or any other topic, feel free to ask. How can I assist you today?"],
+   "context": [""]
+  },
+  {"tag": "AvailableCourses",
+   "patterns": ["What courses do our college offer?", "Tell me about our available programs", "List of majors", "Programs offered"],
+   "responses": ["NNRG offers a wide range of courses and programs in various fields such as MBA, Pharmacy, Engineering. To get a comprehensive list of our available courses, please visit our website or specify your area of interest."],
+   "context": [""]
+  },
+
+  {"tag": "CourseDetails",
+   "patterns": ["Can you tell me more about B.Tech courses ?", "Give me details about B.Tech courses ", "Tell me about School of B.Tech courses"],
+   "responses": ["Computer Science & Engineering, CSE (AI & ML), CSE (Data Science), Information Technology, Electronics and Communication Engineering, Civil Engineering"],
+   "context": [""]
+  },
+
+  {"tag": "Admissions Process",
+   "patterns": ["How can I apply to your college?","When is the application deadline for the upcoming semester?","What are the admission requirements?","Tell me about the admission process","How do I apply for admission?", "What are the requirements for admission?","When is the application deadline?","Can international students apply?","How can I check my application status?","What are the tuition fees?","What majors do you offer?","How can I contact the admissions office?"],
+   "responses": ["To apply to our college, you can visit our admissions website......","Admission requirements vary by program and level of study. You can find specific admission requirements for each program on our website. Generally, you'll need to submit your academic transcripts, standardized test scores (if required), letters of recommendation, and a personal statement","Admission requirements vary by program. You can find specific requirements on our website.",
+   "Application deadlines vary by program and admission type. Please check our website for the deadline that applies to you.",
+   "Yes, we welcome international students. You'll need to follow the same application process and may need to provide proof of English language proficiency and visa documentation.",
+   "You can check your application status by logging into your applicant portal on our website.",
+   "Tuition fees can change annually. Please refer to the 'Tuition and Fees' section on our website for the latest information.",
+   "We offer a wide range of majors and programs. Explore the list on our website for detailed information.",
+   "You can contact the admissions office by phone at [phone number] or by email at [email address]. We're here to help!"],
+   "context": [""]
+  },
+  {"tag": "campus visit",
+   "patterns": ["How can I schedule a campus tour?", "Tell me about virtual information sessions", "Can I visit your campus?"],
+   "responses": ["You can schedule a campus tour or virtual information session by visiting our website and navigating to the 'Visit Us' or 'Events' section. There, you'll find options to register for tours and events."],
+   "context": [""]
+  },
+
+  {"tag": "about NNRG",
+  "patterns": ["Tell about NNRG?","Describe about NNRG?","About NNRG?"],
+  "responses": ["NNRG was established in the year 2009, affiliated to JNTU – Hyderabad, Approved by AICTE – New Delhi and PCI - New Delhi. Institution established with sole objective of providing world class technical education. From the time of its initiation, the Integrated Campus including School of Engineering, School of Pharmacy and School of Management Sciences has been striving to scale the heights of excellence through the consistent efforts of the management headed by Sri Nalla Narasimha Reddy, Secretary and the dedicated and committed faculty. By the introduction of innovative curriculum insistence on academic discipline and imparting of holistic education."],
+  "context": [""]
+ },
+
+  {"tag": "Sports",
+   "patterns": ["What is the last date for registering in sports competition?","What sports and athletics programs are available?"],
+   "responses": ["Sure!Here is the last for registering in sports is 24-09-2023","NNRG college offers a range of sports and athletics programs, including kabaddi, football, cricket, volley ball, running. We have competitive sports teams that participate in [sports leagues/tournaments"],
+   "context": [""]
+  },
+  {"tag": "CulturalActivities",
+   "patterns": ["What cultural events happen at the college?",
+   "Tell me about the annual day celebration.",
+   "Are there any cultural clubs on campus?" ],
+   "responses": ["We host various cultural events throughout the year, including an exciting annual day celebration. It's a vibrant showcase of talent and creativity."],
+
+   "context": [""]
+  },
+  {"tag": "Scholarships",
+   "patterns": ["What is the last date to apply scholarship?","last date to apply scholarship?","Scholarship","what is the last date to apply renewal scholarship 2023?"],
+   "responses": ["Last date to apply scholarship 2023 is 20-09-2023","Renewal scholarship is 20-09-2023"],
+   "context": [""]
+  },
+  {"tag": "cse department HOD",
+   "patterns": ["Who is HOD of cse ?","Computer science and engineering department Head","Details of HOD cse"],
+   "responses":["Dr.K.Rameshwaraiah Working as Professor and Head in Department of Computer Science and Engineering at Nalla Narasimha Reddy Engineering College, Hyderabad from Nov 2015 to till date"]
+  },
+  {"tag": "ECE department HOD",
+   "patterns": ["Who is HOD of ece?","Electronics and communication engineering department Head","Details of HOD ece"],
+   "responses": ["Dr.S.Ravi Chand working as Professor and Head in Department of Computer Science and Engineering at Nalla Narasimha Reddy Engineering College"]
+   
+  },
+  {"tag": "Mechanical HOD",
+   "patterns": ["Who is HOD of Mechanical Department?","Mechanical engineering department Head","Details of HOD mechanical"],
+   "responses": ["DR. G. JANARDHANA RAJU is Dean of School of Engineering, Professor and Head of Mechanical Engineering , Nalla Narasimha Reddy Group of Institutions"]
+  },
+
+  {"tag": "Civil HOD",
+  "patterns": ["Who is HOD of Civil Engineering Department?","Civil engineering department Head","Details of HOD Civil"],
+  "responses": ["Y SRINIVAS is Professor and Head of civil Engineering , Nalla Narasimha Reddy Group of Institutions"]
+ },
+
+ {"tag": "Contact",
+  "patterns": ["provide contact details of nnrg?","How to contact college?"],
+  "responses": ["Sure! you can contact our college using email id :nnrgadmission@nnrg.edu.in or admin@nnrg.edu.in, If any admission enquiry contact +91 9985311103, General enquiry contact: 9885294405,Scholorships enquiry contact: 9885294408"]
+ },
+
+ {"tag": "Timings",
+  "patterns": ["Give timings of nnrg?","what are the timings of nnrg?","provide college timings?"],
+  "responses": ["Sure! College timings are from 9:15 A.M TO 4:00 PM"]
+ }
+
+ 
+
+
+
+
+
+]
+}

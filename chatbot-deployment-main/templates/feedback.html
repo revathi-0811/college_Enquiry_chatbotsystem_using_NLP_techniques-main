@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>feedback</title>
+    <style>
+.grid{
+  /* height: 10dvh; */
+ /* background: black; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+#myForm{
+  margin: 0;
+}
+.num{
+  border: none;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+  background: #f1f1f1;
+}
+h1{
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+</div>
+<nav class="nav">
+    <div class="navdiv">
+        <div class="grd-logo">
+            <img src="{{ url_for('static', filename='images/grd.png') }}" />
+        </div>
+            <div class="typing-demo">
+              <p>Welcome To College Chatbot Admin Site</p>
+            </div>
+        
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/unanswered">Unanswered_Queries</a></li>
+            <li><a href="/">logout</a></li>
+            
+            
+            
+        </ul>
+    </div>
+</nav>
+
+<h1>Feedback </h1>
+  <div class="grid">
+    <div class="form-popup" id="myForm">
+      <form action="/feedbacksave"  name= "form" method="post" class="form-container">
+        <label for="">Rating</label><input type="number" class="num" placeholder="rate the response 1-5"  required>
+        <label for="">Feedback</label><input type="textarea" name="query" placeholder="Enter your feedback about query "  required>  
+        
+        <input type="submit" value="Submit" class="btn"> 
+      </div>
+      
+    </div>
+
+</body>
+</html>

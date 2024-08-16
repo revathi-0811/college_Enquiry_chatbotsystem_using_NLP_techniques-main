@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+    background-image: "{{ url_for('static', filename='images/NNRG_Image.png') }}"
+}
+        </style>
+    <title>Chatbot</title>
+</head>
+<body >
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/feedback">feedback</a></li>
+
+                <li><a href="/">Logout</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+  <image src= "{{ url_for('static', filename='images/NNRG_Image.png') }}" height="500" width="1520"></image>
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is bot. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" name="query" id="query" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+        
+            </div>
+        </div> 
+        <div class="chatbox__button">
+          <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button><h3> Lets chat </h3>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

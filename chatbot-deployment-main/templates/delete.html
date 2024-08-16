@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete record</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<title>home</title>
+</head>
+<body>
+	
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">logout</a></li>
+                
+                
+                
+            </ul>
+        </div>
+    </nav>
+	
+
+	<h3>Remove Student from the list</h3>
+
+
+Student Id <input type="text" name="id">
+<a href="/deleterecord"><input type="submit" value="Submit"></a>
+
+</body>
+</html>

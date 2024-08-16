@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<title>home</title>
+</head>
+<body>
+	
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">users_list</a></li>
+                <li><a href="/">logout</a></li>
+                
+                
+                
+            </ul>
+        </div>
+    </nav>
+	
+ 
+	<h1>Hi, welcome to the website</h1>
+	<br><br>
+	<a href="/unanswered_queries"><h2>Unanswered query table</h2></a>
+	<a href="/add"><h2>Add Student</h2></a><br>
+	<a href ="/view"><h2>List Records</h2></a><br>
+	<a href="/delete"><h2>Delete Record</h2></a><br><br>
+	
+
+</body>
+</html>

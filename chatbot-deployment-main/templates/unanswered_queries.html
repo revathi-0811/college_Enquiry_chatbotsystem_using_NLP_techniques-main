@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unanswered Queries</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .logo , .nav{
+                width: 100%;
+            }
+            .grid{
+                 position: fixed;
+                 right: 0;
+                 top: 0;
+ 
+            }
+            #myForm{
+                /*display: none;*/
+                height: 3rem;
+            }
+           
+        h1{
+            text-align: center;
+        }
+
+.tbl-con {
+                background: #2e2f3b;
+                color: aliceblue;
+                border-collapse: collapse;
+                margin: 25px 10px;
+                font-size: 1em;
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+            }
+    
+            .tbl-con thead tr {
+                background: #1f1f1f;
+                color: aliceblue;
+                text-align: left;
+                font-weight: bold;
+            }
+    
+            .tbl-con th,
+            .tbl-con td {
+                padding: 12px 15px;
+                border-bottom: 1px solid white;
+            }
+            #click{
+                visibility: hidden;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a class="open-button" onclick="openForm()">Delete query</a></li>
+                <li><a href="/view">Admin Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">logout</a></li>
+                
+                
+                
+            </ul>
+        </div>
+    </nav>
+    <h1>Unanswered Queries</h1>
+    <div class="grid">
+     <div class="form-popup" id="myForm">
+        <form action="/feedbackdlt"  name= "form" method="post" class="form-container">
+          <label for="">delete query</label><input type="textarea" name="query" placeholder="enter serial number"  required>  
+          
+          <button type="submit" value="Submit" onclick="closeForm()" id="sub" class="btn">submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+     </div>
+    </div>
+    <table class="tbl-con">
+        <thead>
+            <td>serial number</td> 
+            <td>queries</td>
+        </thead>
+        {% for row in rows %}
+
+        <tr>
+            <td>{{row["serial_no"]}}</td> 
+            <td>{{row["question"]}}</td>
+          
+        </tr>
+
+        {% endfor %}
+    </table>
+    <a href="/unanswered" id="click">view</a>
+<script>
+	window.onload=function(){
+		document.getElementById("click").click()
+	}
+</script>
+    <script>
+        document.getElementById("sub").addEventListener("click", displayDate);
+
+function displayDate() {
+    history.back();
+}
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        </script>
+
+    <!-- Add navigation or other elements as needed -->
+</body>
+</html>

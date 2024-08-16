@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Student</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<title>home</title>
+</head>
+<body>
+	
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">logout</a></li>
+                
+                
+                
+            </ul>
+        </div>
+    </nav>
+	
+	<h2>Student Information</h2> 
+	<form action = "/savedetails" method="post">
+	<table>
+		<tr><td>UserId</td><td><input type="text" name="userid"></td></tr>
+		<tr><td>password</td><td><input type="password" name="pass"></td></tr>
+		
+		<tr><td><input type="submit" value="Submit"></td></tr>
+	</table>
+	</form>
+</body>
+</html>

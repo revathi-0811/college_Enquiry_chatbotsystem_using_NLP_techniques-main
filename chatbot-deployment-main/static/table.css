@@ -1,0 +1,100 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.con {
+    background: silver;
+    padding: 15px;
+    width: 93rem;
+
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two h3 {
+    font-size: 20px;
+}
+
+.typing {
+    width: 50ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.two button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #009879;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    width: 7rem;
+    height: 3rem;
+}
+
+.tbl-con {
+    background: #2e2f3b;
+    color: aliceblue;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 90rem;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.tbl-con thead tr {
+    background: #1f1f1f;
+    color: aliceblue;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tbl-con th,
+.tbl-con td {
+    padding: 12px 15px;
+    border-bottom: 1px solid white;
+}
+
+.tbl-con tbody tr {
+    border-bottom: 1px solid;
+}
+
+.tbl-con tbody tr button {
+    padding: 10px;
+    height: max-content;
+    width: max-content;
+    background: red;
+    color: azure;
+    border-radius: 5px;
+}

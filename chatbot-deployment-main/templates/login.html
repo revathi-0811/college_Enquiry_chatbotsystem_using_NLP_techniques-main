@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Login</title>
+   
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">User login</a></li>
+                
+                <li><a href="admin_login">Admin Login</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+ 
+    <div class="center">
+        <h1 class="anime">WELCOME TO COLLEGE CHATBOT</h1><br><br>
+        <h1 class="anime">Login</h1>
+        <form >
+            <div class="txt-field" required >
+                <input type="text" id="id" required >
+                <span></span>
+                <label>Id</label>
+            </div> 
+            <div class="txt-field" required >
+                <input type="password" id="pass" required >
+                <span></span>
+                <label>Password</label>
+            </div> 
+            <div class="pass">Forget Password</div>
+           <input type="button" id="submit" onClick="login()" value="submit" >
+          
+        </form>
+    </div>
+    
+    <script>
+    function login(){
+         var id= document.getElementById("id").value
+         var pass= document.getElementById("pass").value
+         var frmclg = id.slice(2,4)
+         if(id.length=="" || pass.length==""){
+            alert("please fill all the details");
+         }
+             else if(id.length < 10 || frmclg != '7Z'){
+                 alert("Invalid userId");
+             }
+             else if(pass.length == 4 && pass=="1234"){
+               document.getElementById("submit").onclick=function(){
+                location.href="base"
+                        }
+                    }
+            else {
+                alert("Invalid id and password");
+            }
+    }
+    </script>
+</body>
+</html>

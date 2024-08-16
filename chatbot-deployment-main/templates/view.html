@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+	<title>home</title>
+    <head>
+        <title>List</title>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                display: grid;
+                grid-template-columns: auto;
+                place-items: center;
+                font-size: x-large;
+                font-weight: bold;
+    
+            }
+    
+            h3 {
+                text-align: center;
+                font-size: 50px;
+            }
+    
+            .con {
+                margin: 15px;
+                background: silver;
+                padding-left: 15px;
+                width: 93rem;
+                overflow-x: hidden;
+            }
+    
+            .two {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 20px;
+            }
+    
+            .two h2 {
+                font-size: 30px;
+            }
+    
+            .typing {
+                width: 50ch;
+                animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 3px solid;
+                font-family: monospace;
+                font-size: 2em;
+            }
+    
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+            }
+    
+            @keyframes blink {
+                50% {
+                    border-color: transparent
+                }
+            }
+    
+            .two button {
+                margin-top: 15px;
+                padding: 10px;
+                background-image: linear-gradient(#1095c1, #1095c1);
+                color: white;
+                /* border: 0; */
+                border-radius: 15px;
+                width: 7rem;
+                height: 3rem;
+            }
+    
+            .tbl-con {
+                background: #2e2f3b;
+                color: aliceblue;
+                border-collapse: collapse;
+                margin: 25px 10px;
+                font-size: 1em;
+                min-width: 90rem;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+            }
+    
+            .tbl-con thead tr {
+                background: #1f1f1f;
+                color: aliceblue;
+                text-align: left;
+                font-weight: bold;
+            }
+    
+            .tbl-con th,
+            .tbl-con td {
+                padding: 12px 15px;
+                border-bottom: 1px solid white;
+            }
+    
+            .hover-1 {
+                height: 2.5rem;
+                position: absolute;
+                top: 25px;
+                left: 0;
+                background-image: linear-gradient(#000, #000);
+                background-size: 0 100%;
+                background-repeat: no-repeat;
+                transition: .4s;
+            }
+    
+            .hover-1:hover {
+                background-size: 100% 100%;
+                border-radius: 10px;
+                box-shadow: 0 0 5px cyan, 0 0 50px cyan, 0 0 75px cyan, 0 0 100px cyan;
+            }
+    
+            .hover-1 a,
+            .tbl-con a {
+                padding: 10px 5px;
+                font-weight: lighter;
+                color: black;
+                text-decoration: none;
+            }
+    
+            .a-h {
+                width: 75px;
+                height: 75px;
+                background: red;
+                color: aliceblue;
+                border-radius: 10px;
+            }
+    
+            /*  Button used to open the contact form - fixed at the bottom of the page */
+            .open-button {
+                background-color: #555;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                /* position: absolute;
+      top: 23px;
+      right: 28px; */
+                width: 280px;
+            }
+    
+            /* The popup form - hidden by default */
+            .form-popup {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+    
+            /* Add styles to the form container */
+            .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+            }
+    
+            /* Full-width input fields */
+            .form-container input[type=text],
+            .form-container input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+    
+            /* When the inputs get focus, do something */
+            .form-container input[type=text]:focus,
+            .form-container input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+    
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+    
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+    
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover,
+            .open-button:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    
+</head>
+<body>
+	
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/NNRG-LOGO3.jpg') }}" />
+    </div>
+    <nav class="nav">
+        <div class="navdiv">
+            <div class="grd-logo">
+                <img src="{{ url_for('static', filename='images/grd.png') }}" />
+            </div>
+                <div class="typing-demo">
+                  <p>College Enquiry ChatBot</p>
+                </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/unanswered">Unanswered_Queries</a></li>
+                <li><a href="/">logout</a></li>
+                
+                
+                
+            </ul>
+        </div>
+    </nav>
+   
+
+    <div class="typing">
+        <h1>Welcome To College Chatbot Admin Site</h1>
+    </div>
+    <div class="con">
+        <div class="two">
+            <h3>Students Information</h3>
+            <button class="open-button" onclick="openForm()">Add User</button>
+            <button class="open-button" onclick="opendeleteForm()">Delete User</button>
+
+        </div>
+        <div class="form-popup" id="myForm">
+            <form action="/savedetails" class="form-container" method="post">
+                <h1>Add User</h1>
+                <label for="userid"><b>Enter UserID</b></label><input type="text" name="userid" required>
+                <label for="userid"><b>Enter Password</b></label><input type="password" placeholder="Enter pass" name="pass" required>
+                <button type="submit" class="btn">Add User</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <div class="form-popup" id="deleteForm">
+            <form action="/deleterecord" class="form-container" method="post">
+                <h2>Delete User</h2>
+                <label ><b>Enter UserID</b></label><input type="text" name="userid" required>
+                <!-- <label for="userid"><b>Enter Password</b></label><input type="password" placeholder="Enter pass" name="pass" required> -->
+                <button type="submit" class="btn">Delete User</button>
+                <button type="button" class="btn cancel" onclick="closedeleteForm()">Close</button>
+            </form>
+        </div>
+
+
+        <table class="tbl-con">
+            <thead>
+                <td>UserID</td>
+                <!-- <td>action</td> -->
+            </thead>
+            {% for row in rows %}
+
+            <tr>
+                <td>{{row["userid"]}}</td>
+                <!-- <td><a href="/delete/{{row.id}}" class="a-h">delete</a></td> -->
+                <!-- <td>
+                    <form action="/deleterecord/{{row.userid}}" method="post">
+                    <input type="submit" value="Delete" class="a-h">
+                     </form>
+                </td> -->
+            </tr>
+
+            {% endfor %}
+        </table>
+        <br><br>
+        <div class="hover-1">
+            <a id="go-home" href="/"><button>Home</button></a>
+        </div>
+
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+            function opendeleteForm() {
+                document.getElementById("deleteForm").style.display = "block";
+            }
+
+            function closedeleteForm() {
+                document.getElementById("deleteForm").style.display = "none";
+            }
+        </script>
+</body>
+
+</html>

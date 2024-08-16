@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#output-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#processed-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
